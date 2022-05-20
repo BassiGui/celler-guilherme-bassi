@@ -9,10 +9,6 @@ const Home = ({ handleUpdateBeer, handleDeleteBeer, beers }) => {
         handleDeleteBeer={handleDeleteBeer}
         beers={beers}
       />
-
-      <div className="Array-preview">
-        <pre>{JSON.stringify(beers, null, 4)}</pre>
-      </div>
     </section>
   );
 };

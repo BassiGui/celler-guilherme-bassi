@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './Button.module.css';
 
-const Button = ({ children, ...props }) => {
+const Button = ({ secondColor, children, ...props }) => {
   return (
-    <button {...props} className={styles.button}>
+    <button
+      {...props}
+      className={`${secondColor ? styles.buttonSecondary : styles.button}`}
+    >
       {children}
     </button>
   );

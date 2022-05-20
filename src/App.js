@@ -8,16 +8,21 @@ import Home from './Components/Home';
 
 function App() {
   const [beer, setBeer] = React.useState([]);
-  console.log(beer);
-  function handleAddBeer(beers) {
+  function handleAddBeer(beers, img, liters) {
+    console.log(beers);
     const newBeer = [...beer];
-    newBeer.push({ id: beers.length, value: beers });
+    newBeer.push({ id: beers.length, value: beers, img: img, liters: liters });
     setBeer(newBeer);
   }
 
-  function handleUpdateBeer({ target }, index) {
+  function handleUpdateBeer({ target }, index, img, liters) {
     const newBeer = [...beer];
-    newBeer.splice(index, 1, { id: index, value: target.value });
+    newBeer.splice(index, 1, {
+      id: index,
+      value: target.value,
+      img: img,
+      liters: liters,
+    });
     setBeer(newBeer);
   }
 

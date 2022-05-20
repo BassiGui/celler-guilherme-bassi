@@ -21,3 +21,27 @@
   opacity: 0.5;
   cursor: wait;
 }
+
+.buttonSecondary{
+  font-size: 1rem;
+  font-family: var(--type-first);
+  cursor: pointer;
+  border: none;
+  border-radius: .4rem;
+  background: #333;
+  color: white;
+  padding: .8rem 1.2rem;
+  box-sizing: border-box;
+  transition: .1s;
+  min-width: 8rem;
+}
+
+.buttonSecondary:hover, .buttonSecondary:focus{
+  outline: none;
+  box-shadow: 0 0 0 3px #ccc, 0 0 0 4px #333;
+}
+
+.buttonSecondary:disabled{
+  opacity: 0.5;
+  cursor: wait;
+}
