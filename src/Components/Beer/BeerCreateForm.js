@@ -22,7 +22,6 @@ const BeerCreateForm = () => {
   function handleChangeLiters({ target }) {
     setLiters(target.value);
   }
-
   function handleSubmitForm(e) {
     e.preventDefault();
     axios
@@ -38,6 +37,7 @@ const BeerCreateForm = () => {
         console.log(error);
       });
   }
+
   return (
     <section className={`${styles.createBeer} container mainContainer`}>
       <form onSubmit={handleSubmitForm} className={`${styles.forms} animeLeft`}>
@@ -47,20 +47,29 @@ const BeerCreateForm = () => {
           label="Brand beer"
           placeholder="Type a Brand"
           onChange={handleChange}
+          required
         />
         <Input
           name="image"
           label="Imagem beer"
           type="file"
           onChange={handleChangeImg}
+          required
         />
         <Input
           type="number"
           label="Liters of a bottle"
           name="liters"
           onChange={handleChangeLiters}
+          required
         />
-        <Button type="submit">Create</Button>
+        {newBeer && file && liters ? (
+          <Button type="submit">Create</Button>
+        ) : (
+          <Button disabled type="submit">
+            Create
+          </Button>
+        )}
       </form>
     </section>
   );

@@ -7,9 +7,8 @@ const Input = ({
   name,
   value,
   onChange,
-  erro,
-  onBlur,
   placeholder,
+  ...props
 }) => {
   return (
     <div className={style.wrapper}>
@@ -23,10 +22,9 @@ const Input = ({
         type={type}
         onChange={onChange}
         value={value}
-        onBlur={onBlur}
         placeholder={placeholder}
+        {...props}
       />
-      {erro && <p className={style.erro}>{erro}</p>}
     </div>
   );
 };

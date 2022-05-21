@@ -75,28 +75,30 @@ const Feed = () => {
   return (
     <>
       <h1 className="title">List of beers</h1>
-      <div className={styles.feedHeader}>
-        <div>
-          <Input
-            type="text"
-            value={filter}
-            placeholder="make your search by name"
-            label="Search by name"
-            onChange={handleSearch}
-          />
-        </div>
-        <div style={{ marginBottom: '1rem' }}>
-          <p className={styles.sortText}>Sort by:</p>
-          <div className={styles.sort}>
-            <Button secondColor={true} onClick={handleOrderByNameAsc}>
-              Ascending name
-            </Button>
-            <Button secondColor={true} onClick={handleOrderByNameDesc}>
-              Descending name
-            </Button>
+      {data.length > 0 && (
+        <div className={styles.feedHeader}>
+          <div>
+            <Input
+              type="text"
+              value={filter}
+              placeholder="make your search by name"
+              label="Search by name"
+              onChange={handleSearch}
+            />
+          </div>
+          <div style={{ marginBottom: '1rem' }}>
+            <p className={styles.sortText}>Sort by:</p>
+            <div className={styles.sort}>
+              <Button secondColor={true} onClick={handleOrderByNameAsc}>
+                Ascending name
+              </Button>
+              <Button secondColor={true} onClick={handleOrderByNameDesc}>
+                Descending name
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <div className={`${data.length === 0 ? '' : styles.grid}`}>
         {data.length === 0 ? (
           <NoItem
