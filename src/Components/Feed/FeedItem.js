@@ -12,7 +12,7 @@ const FeedItem = ({ beerName, onDelete, image, liters, onUpdate }) => {
   return (
     <div className={`${styles.feedItem} animeLeft`} onClick={handleClick}>
       <img src={image} alt={beerName} />
-      {details && (
+      {details ? (
         <div className={styles.body}>
           <h2>{beerName}</h2>
           <p>{liters} Liters</p>
@@ -24,6 +24,11 @@ const FeedItem = ({ beerName, onDelete, image, liters, onUpdate }) => {
               </Button>
             </Link>
           </div>
+        </div>
+      ) : (
+        <div className={styles.moreDetails}>
+          <h2>{beerName}</h2>
+          <p>Click here for more details</p>
         </div>
       )}
     </div>

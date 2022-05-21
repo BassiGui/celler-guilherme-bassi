@@ -34,6 +34,10 @@ button, input{
   color: #333;
 }
 
+label{
+  font-family: var(--type-second);
+}
+
 a{
   text-decoration: none;
   color: #333;
@@ -47,6 +51,7 @@ a{
 
 .mainContainer{
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .title{
   font-family: var(--type-second);
