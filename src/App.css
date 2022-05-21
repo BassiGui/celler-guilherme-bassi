@@ -85,8 +85,8 @@ a{
 .App{
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh + 10rem);
+  min-height: calc(100vh - 3rem);
 }
 .AppBody{
-  flex: 1;
+  flex: 1 1;
 }

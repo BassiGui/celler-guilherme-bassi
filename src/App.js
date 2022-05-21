@@ -2,55 +2,21 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import BeerCreateForm from './Components/Beer/BeerCreateForm';
+import BeerUpdateForm from './Components/Beer/BeerUpdateForm';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
 
 function App() {
-  const [beer, setBeer] = React.useState([]);
-  function handleAddBeer(beers, img, liters) {
-    console.log(beers);
-    const newBeer = [...beer];
-    newBeer.push({ id: beers.length, value: beers, img: img, liters: liters });
-    setBeer(newBeer);
-  }
-
-  function handleUpdateBeer({ target }, index, img, liters) {
-    const newBeer = [...beer];
-    newBeer.splice(index, 1, {
-      id: index,
-      value: target.value,
-      img: img,
-      liters: liters,
-    });
-    setBeer(newBeer);
-  }
-
-  function handleDeleteBeer(index) {
-    const newBeer = [...beer];
-    newBeer.splice(index, 1);
-    setBeer(newBeer);
-  }
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
         <main className="AppBody">
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Home
-                  handleUpdateBeer={handleUpdateBeer}
-                  handleDeleteBeer={handleDeleteBeer}
-                  beers={beer}
-                />
-              }
-            />
-            <Route
-              path="add-new-beer/*"
-              element={<BeerCreateForm handleSubmit={handleAddBeer} />}
-            />
+            <Route path="/" element={<Home />} />
+            <Route path="add-new-beer/*" element={<BeerCreateForm />} />
+            <Route path="update-beer/*" element={<BeerUpdateForm />} />
           </Routes>
         </main>
         <Footer />

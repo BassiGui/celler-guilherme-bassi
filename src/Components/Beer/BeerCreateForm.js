@@ -5,7 +5,7 @@ import Input from '../Forms/Input';
 import styles from './BeerCreateForm.module.css';
 import axios from 'axios';
 
-const BeerCreateForm = ({ handleSubmit }) => {
+const BeerCreateForm = () => {
   const [newBeer, setNewBeer] = React.useState('');
   const [file, setFile] = React.useState();
   const [liters, setLiters] = React.useState(0);
@@ -33,6 +33,9 @@ const BeerCreateForm = ({ handleSubmit }) => {
       })
       .then(() => {
         navigate('/');
+      })
+      .catch(function (error) {
+        console.log(error);
       });
   }
   return (
