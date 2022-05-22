@@ -5,14 +5,15 @@ This project has the functionality to control a beer cellar
 <p align="center">
  <a href="#features">Features</a> •
  <a href="#prerequisite">Prerequisites</a> • 
- <a href="#technology">Technology</a> • 
+ <a href="#-technology">Technology</a> • 
  <a href="#architecture">Architecture</a> •
- <a href="#available">Run the Web site</a> •  
+ <a href="#run">Run the Web site</a> •  
+ <a href="#versions">Versions</a> •  
  <a href="#author">Author</a>
 </p>
 
 <h4 align="center"> 
-	✅  Beer Celler 🚀 Version 1...  ✅
+	✅  Beer Celler  🚀  Version 1...  ✅
 </h4>
 
 ### Features
@@ -27,12 +28,12 @@ This project has the functionality to control a beer cellar
 
 ### Prerequisite
 
-Before start, you will need to install some setting on your computer, like:
-[Node.js](https://nodejs.org/en/), You will need a good editor to see the code, I recomend [VSCode](https://code.visualstudio.com/)
+Before start, you will need to install some settings in your computer, like:
+[Node.js](https://nodejs.org/en/), You will also need a good editor to see the code, I recomend [VSCode](https://code.visualstudio.com/)
 
 ### 🛠 Technology
 
-There are the technology that I used in this project
+These are the technologies that I have used in this project:
 
 - [MockAPI](https://mockapi.io/)
 - [Node.js](https://nodejs.org/en/)
@@ -40,31 +41,35 @@ There are the technology that I used in this project
 - [Axios](https://axios-http.com/docs/intro)
 - [React Router](https://v5.reactrouter.com/web/guides/quick-start)
 
-### Architecture
+## Architecture
 
 ### `GitHub`
 
 In GitHub I used 3 kinds of "enviroment":
+I´ve decided to use 3 types of "enviroments"
 
 ### `master`
 
-It is used for a production enviroment, all the final versions are here
+Master is used for a production enviroment, all the final versions are here
 
 ### `stage`
 
-It is used for a test enviroment, when I create a functionality and I've tested this functionality on develop enviroment, I merge this code on stage branch for all testers.
+Stage is a test environment. When we finalize the functionality we merge the development code to the stage for testers validate the new feature.
 
 ### `develop`
 
-It is used for a development enviroment, all the functionality where create here
+Develop is used for a development environment and all the new features are created in this branch.
 
 ### Code Architecture
 
-On beer celler I've used MockAPi to simulate a request from an API. To make this request (GET, POST, PUT) I used Axios.
-I also used React-Router-Dom to create the routes and ReactJS as an visual interface.
-To style my components I've just used a simple css
+For this project I’ve decide to start with the UI to have a better solution and view from all components together. To control the URL I’ve inserted the React-Router-Dom to make the navigation of the website.
+After that, I’ve started to create the functionalities and for data control I’ve used MockAPI to simulate a request from an API. And then, I’ve integrated Axios into my code for the API communication.
 
-## Available Scripts
+## Versions
+
+- [NodeJs](18.1.0)
+
+## Run
 
 In the project directory, you can run:
 
