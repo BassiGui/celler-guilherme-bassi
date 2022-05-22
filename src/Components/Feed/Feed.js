@@ -12,8 +12,6 @@ const Feed = () => {
   const [sortByNameAsc, setSortByNameAsc] = React.useState(false);
   const [sortByNameDesc, setSortByNameDesc] = React.useState(false);
 
-  console.log(data);
-
   React.useEffect(() => {
     axios
       .get('https://62881afb10e93797c156a03a.mockapi.io/beers')
