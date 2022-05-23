@@ -1,6 +1,6 @@
 # Beer Celler 🍺
 
-This project has the functionality to control a beer cellar
+A project with the purpose to control a beer cellar
 
 <p align="center">
  <a href="#features">Features</a> •
@@ -16,7 +16,7 @@ This project has the functionality to control a beer cellar
 	✅  Beer Celler  🚀  Version 1...  ✅
 </h4>
 
-### Features
+## Features
 
 - [x] Upload a beer
 - [x] Delete a Beer
@@ -26,12 +26,12 @@ This project has the functionality to control a beer cellar
 - [x] Sort a beer list by name
 - [ ] Sort a beer list by Date
 
-### Prerequisite
+## Prerequisite
 
 Before start, you will need to install some settings in your computer, like:
 [Node.js](https://nodejs.org/en/), You will also need a good editor to see the code, I recomend [VSCode](https://code.visualstudio.com/)
 
-### 🛠 Technology
+## 🛠 Technology
 
 These are the technologies that I have used in this project:
 
@@ -67,7 +67,7 @@ After that, I’ve started to create the functionalities and for data control I�
 
 ## Versions
 
-- [NodeJs](18.1.0)
+- NodeJs v18.1.0
 
 ## Run
 
@@ -81,7 +81,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### Author
+## Author
 
 Guilherme Bassi
 
